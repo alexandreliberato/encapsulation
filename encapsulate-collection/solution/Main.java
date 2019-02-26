@@ -1,22 +1,28 @@
 package org.feiler.encapsulation;
 
-import org.feiler.encapsulation.Organization;
+import org.feiler.encapsulation.Person;
 import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		HashMap<String, String> mapOrganization = new HashMap<String, String>() {{
-			put("name", "Acme Gooseberries");
-			put("country", "GB");
-		}};
+		List<String> courses = new ArrayList<String>(){{add("portuguese"); add("spanish");}};
 
-		System.out.println(mapOrganization.get("name"));
-		System.out.println(mapOrganization.get("country"));
+		Person person = new Person();
+		person.setCourses(courses);
 
-		Organization organization = new Organization("Acme Gooseberries", "GB");
+		System.out.println("> person's courses");
+		person.getCourses().forEach(System.out::println);
 
-		System.out.println(organization);
+		System.out.println("> lets add new ones");
+		List<String> newCourses = new ArrayList<String>(){{add("french"); add("chinese");}};
+
+		person.setCourses(newCourses);
+
+		System.out.println("> oops");
+		person.getCourses().forEach(System.out::println);
 	}
 }

@@ -1,5 +1,7 @@
 package org.feiler.encapsulation;
 
+import java.util.List;
+
 public class Person {
 	
 	private List<String> courses;

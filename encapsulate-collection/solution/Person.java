@@ -1,6 +1,7 @@
 package org.feiler.encapsulation;
 
 import java.util.List;
+import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public class Person {
@@ -12,6 +13,11 @@ public class Person {
 	}
 
 	public void addCourse(String course) {
+
+		if (this.courses == null) {
+			this.courses = new ArrayList<String>();
+		}
+
 		this.courses.add(course);
 	}
 
