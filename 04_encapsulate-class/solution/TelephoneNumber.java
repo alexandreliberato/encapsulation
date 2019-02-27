@@ -29,11 +29,7 @@ public class TelephoneNumber {
 		return this.officeNumber;
 	}
 
-	public String getTelephoneNumber() {
-		return this.officeAreaCode + " " + this.officeNumber;
-	}
-
 	public String toString() {
-		return this.getTelephoneNumber();
+		return this.officeAreaCode + " " + this.officeNumber;
 	}
  }

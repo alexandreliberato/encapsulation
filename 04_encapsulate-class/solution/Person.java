@@ -63,7 +63,7 @@ public class Person {
 	}
 
 	public String getTelephoneNumber() {
-		return this.telephoneNumber.getTelephoneNumber();
+		return this.telephoneNumber.toString();
 	}
 
 	public String toString() {
