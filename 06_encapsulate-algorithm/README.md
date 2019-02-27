@@ -1,3 +1,6 @@
-javac -d . Organization.java
-javac -d . Main.java
-java org.feiler.ecapsulation.Main
+Encapsulate Algorithm
+=====================
+
+> found clearer way to do something
+> happens when learn more about the problem
+> if ostart to use a library that cover this algorithm

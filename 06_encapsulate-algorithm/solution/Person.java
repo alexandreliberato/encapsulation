@@ -1,21 +1,31 @@
 package org.feiler.encapsulation;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class Person {
 	
-	private List<String> courses;
+	private String name;
 
-	public List<String> getCourses() {
-		return this.courses.stream().collect(Collectors.toList());
+	public Person(String name, Department department){
+
+		setName(name);
+		setDepartment(department);
 	}
 
-	public void addCourse(String course) {
-		this.courses.add(course);
+	public Person foundPerson(List<Person> people) {
+
+		return  people.stream()
+					.filter(p -> p.getName().equals(getName()))
+					.collect().findFirst();
 	}
 
-	public void removeCourse(String course) {
-		this.courses.remove(course);
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String toString() {
+		return this.name + ":" + this.getDepartment();
 	}
  }
