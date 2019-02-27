@@ -7,6 +7,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		System.out.println("\n>> encapsulate register");
+
 		Organization organization = new Organization("Acme Gooseberries", "GB");
 
 		System.out.println("> object");

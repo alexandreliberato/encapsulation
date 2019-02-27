@@ -9,6 +9,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		System.out.println("\n>> encapsulate collection");
+
 		List<String> courses = new ArrayList<String>(){{add("portuguese"); add("spanish");}};
 
 		Person person = new Person();
