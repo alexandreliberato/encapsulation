@@ -1,22 +1,33 @@
 package org.feiler.encapsulation;
 
-import org.feiler.encapsulation.Organization;
-import java.util.HashMap;
+import org.feiler.encapsulation.Person;
+import org.feiler.encapsulation.Department;
+import org.feiler.encapsulation.Manager;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Main {
 
 	public static void main(String[] args) {
 
-		HashMap<String, String> mapOrganization = new HashMap<String, String>() {{
-			put("name", "Acme Gooseberries");
-			put("country", "GB");
+		System.out.println("\n>> hide delegate");
+
+		Department department = new Department();
+		department.setChargeCode("054813");
+		department.setManager(new Manager("Martin Fowler"));
+
+		List<Person> people = new ArrayList<Person>(){{
+			add(new Person("Alexandre", department));
+			add(new Person("Amanda", department));
+			add(new Person("Breno", department));
+			add(new Person("Andressa", department));
 		}};
 
-		System.out.println(mapOrganization.get("name"));
-		System.out.println(mapOrganization.get("country"));
+		System.out.println("\n> people with their departments");
+		people.forEach(System.out::println);
 
-		Organization organization = new Organization("Acme Gooseberries", "GB");
-
-		System.out.println(organization);
+		System.out.println("\n");
 	}
 }

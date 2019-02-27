@@ -2,13 +2,32 @@ package org.feiler.encapsulation;
 
 public class Person {
 	
-	private List<String> courses;
+	private String name;
+	private Department department;
 
-	public List<String> getCourses() {
-		return this.courses;
+	public Person(String name, Department department){
+
+		setName(name);
+		setDepartment(department);
 	}
 
-	public void setCourses(List<String> courses) {
-		this.courses = courses;
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}	
+
+	public Department getDepartment() {
+		return this.department;
+	}
+
+	public String toString() {
+		return this.name + ":" + this.getDepartment();
 	}
  }
