@@ -26,5 +26,7 @@ public class Main {
 
 		System.out.println("> oops");
 		person.getCourses().forEach(System.out::println);
+
+		System.out.println("\n");
 	}
 }

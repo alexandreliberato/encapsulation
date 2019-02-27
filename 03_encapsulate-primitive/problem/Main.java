@@ -30,5 +30,7 @@ public class Main {
 		System.out.println("\n> new orders with higher priority");
 
 		newOrders.forEach(System.out::println);
+
+		System.out.println("\n");
 	}
 }

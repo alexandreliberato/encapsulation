@@ -1,24 +1,16 @@
 package org.feiler.encapsulation;
 
-public class Person {
+public class TelephoneNumber {
 	
-	private String name;
 	private String officeAreaCode;
 	private String officeNumber;
 
-	public Person(String name, String officeAreaCode, String officeNumber) {
+	public TelephoneNumber() {}
 
-		this.name = name;
+	public TelephoneNumber(String officeAreaCode, String officeNumber) {
+
 		this.officeAreaCode = officeAreaCode;
 		this.officeNumber = officeNumber;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public void setOfficeAreaCode(String officeAreaCode) {
@@ -42,6 +34,6 @@ public class Person {
 	}
 
 	public String toString() {
-		return this.name + ":" + this.getTelephoneNumber();
+		return this.getTelephoneNumber();
 	}
  }

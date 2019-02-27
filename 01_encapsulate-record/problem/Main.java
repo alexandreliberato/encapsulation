@@ -16,5 +16,7 @@ public class Main {
 		System.out.println("> valores do registro");
 		System.out.println(mapOrganization.get("name"));
 		System.out.println(mapOrganization.get("country"));
+
+		System.out.println("\n");
 	}
 }

@@ -1,3 +1,6 @@
-javac -d . Organization.java
-javac -d . Main.java
-java org.feiler.ecapsulation.Main
+Extract class
+=============
+
+> In pratice classes growth
+> New responsabilities are added
+> Class is too big to understand easily

@@ -13,5 +13,7 @@ public class Main {
 
 		System.out.println("> object");
 		System.out.println(organization);
+
+		System.out.println("\n");
 	}
 }
